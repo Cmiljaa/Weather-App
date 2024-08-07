@@ -13,6 +13,8 @@ class WeatherService
             'units' => 'metric'
         ]);
 
+        
+
         return $response->json();
     }
 }
