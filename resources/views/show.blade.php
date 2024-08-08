@@ -5,13 +5,7 @@
     <div class="row">
         <div class="col-12 d-flex justify-content-center" >
             <div class="center-box">
-                <form action="{{route('show')}}" method="POST" class="weather-search">
-                    @csrf
-                    <div class="input-group">
-                        <input type="search" name="city" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                        <button type="submit" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
-                    </div>
-                </form>
+                @include('form')
                 @if(!isset($city['message']))
                     <img src="{{ asset('icons/' . $city['weather'][0]['icon'] . '.svg') }}" alt="icon not loaded" style="width: 175px; height: 175px; margin: px;">
                     <h1 class="display-4">{{round($city['main']['temp'])}}°C</h1>
