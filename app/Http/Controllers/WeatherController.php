@@ -14,7 +14,6 @@ class WeatherController extends Controller
     public function show(Request $request){
         
         $city = $request->input('city');
-
         $city = WeatherService::getForecast($city);
         return view('show', ['city' => $city]);
     }
