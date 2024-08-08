@@ -15,14 +15,28 @@
             border: 1px solid #dee2e6;
             margin-top: 100px;
             justify-content: center;
+            color: #000;
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
-            background: rgb(58,150,236);
-background: linear-gradient(0deg, rgba(58,150,236,1) 0%, rgba(228,228,211,1) 0%, rgba(30,221,166,1) 91%);
+            background: rgb(74,221,30);
+            background: linear-gradient(0deg, rgba(74,221,30,1) 0%, rgba(255,160,0,1) 100%);
         }
         .weather-search{
             margin: 10px;
             margin-top: 20px;
+            margin-bottom: -5px;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-around; /* Centers the items horizontally */
+            gap: 20px; /* Space between the items */
+        }
+
+        .flex-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers the icon and text */
+            text-align: center;
         }
     </style>
 </head>
