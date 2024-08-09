@@ -15,6 +15,9 @@ class WeatherController extends Controller
         
         $city = $request->input('city');
         $city = WeatherService::getForecast($city);
-        return view('show', ['city' => $city]);
+        return view('show', [
+            'city' => $city,
+            'photo' => isset($city['weather'][0]['icon']) ? substr($city['weather'][0]['icon'], 0, 2) : '13'
+        ]);
     }
 }
