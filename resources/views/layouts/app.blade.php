@@ -8,12 +8,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>@yield('title')</title>
     <style>
+        body{
+            background-image: url('{{ asset('icons/' . (isset($photo) ? ($photo . ".jpg") : 'default.jpg')) }}');
+            background-size: cover;
+        }
         .center-box {
             width: 400px;
-            height: 500px;
+            height: 530px;
             background-color: #f8f9fa;
             border: 1px solid #dee2e6;
-            margin-top: 100px;
+            border: 0px;
+            border-radius: 15px;
+            margin-top: 85px;
             justify-content: center;
             color: #000;
             text-align: center;
@@ -24,7 +30,6 @@
         .weather-search{
             margin: 10px;
             margin-top: 20px;
-            margin-bottom: -5px;
         }
         .flex-container {
             display: flex;
@@ -40,7 +45,7 @@
         }
     </style>
 </head>
-<body style="background-image: url({{asset('icons/13.jpg')}}); background-size: cover;">
+<body>
     @yield('content')
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

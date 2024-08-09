@@ -7,7 +7,7 @@
             <div class="center-box">
                 @include('form')
                 @if(!isset($city['message']))
-                    <img src="{{ asset('icons/' . $city['weather'][0]['icon'] . '.svg') }}" alt="icon not loaded" style="width: 175px; height: 175px; margin: px;">
+                    <img src="{{ asset('icons/' . $city['weather'][0]['icon'] . '.svg') }}" alt="icon not loaded" style="width: 175px; height: 175px; margin-top: 5px;">
                     <h1 class="display-4">{{round($city['main']['temp'])}}°C</h1>
                     <h2>{{$city['weather'][0]['main']}}</h2>
                     <h3>{{$city['name']}}, {{$city['sys']['country']}}</h3>
